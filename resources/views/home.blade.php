@@ -1052,6 +1052,26 @@
         opacity: 1;
         transform: translateY(0);
     }
+
+    /* ── MOBILE NAVBAR ── */
+    @media (max-width: 768px) {
+        .nav-cta {
+            display: none;
+        }
+
+        .logo-gaz {
+            font-size: 8px;
+            letter-spacing: 1px;
+        }
+
+        .navbar {
+            padding: 12px 6px;
+        }
+
+        .hero {
+            padding: 40px 16px;
+        }
+    }
 </style>
 @endsection
 

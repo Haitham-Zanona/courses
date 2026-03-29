@@ -206,6 +206,7 @@
         <div class="logo">
             <span class="logo-en">Obada-Ar</span>
             <span class="logo-ar">تعلّم العربية مع عبادة</span>
+            <span class="logo-ar">Learn Arabic With Obada</span>
         </div>
 
         <div class="ornament">

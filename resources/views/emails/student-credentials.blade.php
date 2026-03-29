@@ -128,14 +128,14 @@
 <body>
     <div class="card">
 
-        <div class="logo">ARABIC PRO</div>
+        <div class="logo">Obada-Ar</div>
         <div class="logo-ar">تعلّم العربية مع عبادة</div>
 
         <hr class="divider">
 
         <h2>Welcome, {{ $studentName }}! 🎉</h2>
         <p>
-            Thank you for enrolling in <strong style="color:#D4AF37">Arabic Pro</strong>.
+            Thank you for enrolling in <strong style="color:#D4AF37">Obada-Ar</strong>.
             Your account is ready — here are your login details to access the course:
         </p>
 
@@ -170,7 +170,7 @@
         </div>
 
         <p class="footer-note">
-            © {{ date('Y') }} Arabic Pro — All Rights Reserved<br>
+            © {{ date('Y') }} Obada-Ar — All Rights Reserved<br>
             If you have any questions, reply to this email.
         </p>
 

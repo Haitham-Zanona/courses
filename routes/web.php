@@ -25,7 +25,7 @@ Route::post('/logout', [StudentAuthController::class, 'logout'])->name('logout')
 
 // صفحة الكورس المحمية
 Route::get('/course', [StudentAuthController::class, 'course'])
-// ->middleware('student.auth')
+    ->middleware('student.auth')
     ->name('course');
 
 require __DIR__ . '/auth.php';
