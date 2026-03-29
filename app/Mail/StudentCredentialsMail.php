@@ -21,7 +21,7 @@ class StudentCredentialsMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: '🎉 Welcome to Arabic Pro — Your Login Details',
+            subject: '🎉 Welcome to Obada-Ar — Your Login Details',
         );
     }
 
@@ -36,7 +36,7 @@ class StudentCredentialsMail extends Mailable
     {
         return [
             Attachment::fromPath(public_path('files/arabic-pro-course.pdf'))
-                ->as('Arabic Pro Course.pdf')
+                ->as('Obada-Ar Course.pdf')
                 ->withMime('application/pdf'),
         ];
     }

@@ -27,7 +27,7 @@ class PayPalController extends Controller
         $response = $provider->createOrder([
             "intent"              => "CAPTURE",
             "application_context" => [
-                "brand_name"   => "Arabic Pro",
+                "brand_name"   => "Obada-Ar",
                 "locale"       => "en-US",
                 "landing_page" => "BILLING",
                 "user_action"  => "PAY_NOW",
@@ -35,7 +35,7 @@ class PayPalController extends Controller
                 "cancel_url"   => route('paypal.cancel'),
             ],
             "purchase_units"      => [[
-                "description" => "Arabic Pro — Beginner's Course",
+                "description" => "Obada-Ar — Beginner's Course",
                 "amount"      => [
                     "currency_code" => "USD",
                     "value"         => "49.00",
