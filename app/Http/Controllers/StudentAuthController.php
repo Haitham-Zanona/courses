@@ -49,7 +49,8 @@ class StudentAuthController extends Controller
     // ── صفحة الكورس ──
     public function course()
     {
-        $student = auth('student')->user();
-        return view('course', compact('student'));
+        // $student = auth('student')->user();
+        // return view('course', compact('student'));
+        return view('course');
     }
 }

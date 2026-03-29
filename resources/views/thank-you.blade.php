@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Thank You — Arabic Pro')
+@section('title', 'Thank You — Obada-Ar')
 @section('styles')
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lato:wght@300;400;700&family=Amiri:wght@400;700&display=swap');
@@ -148,7 +148,7 @@
 <div class="geo-bg"></div>
 <div class="card">
     <span class="check">✅</span>
-    <span class="logo">ARABIC PRO</span>
+    <span class="logo">Obada-Ar</span>
     <span class="logo-ar">تعلّم العربية مع عبادة</span>
     <div class="ornament"><span>❖</span></div>
     <h2>PAYMENT SUCCESSFUL!</h2>

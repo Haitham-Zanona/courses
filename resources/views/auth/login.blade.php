@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Login — Arabic Pro')
+@section('title', 'Login — Obada-Ar')
 
 @section('styles')
 <style>
@@ -204,7 +204,7 @@
 
     <div class="login-card">
         <div class="logo">
-            <span class="logo-en">ARABIC PRO</span>
+            <span class="logo-en">Obada-Ar</span>
             <span class="logo-ar">تعلّم العربية مع عبادة</span>
         </div>
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'ArabicPro — Learn Arabic From Zero')
+@section('title', 'Obada-Ar — Learn Arabic From Zero')
 
 @section('styles')
 <style>
@@ -1061,7 +1061,11 @@
 
 {{-- NAVBAR --}}
 <nav class="navbar">
-    <a href="#" class="nav-cta">ENROLL NOW</a>
+    <div class="logo">
+        <span class="logo-en">Obada-Ar</span>
+        {{-- <span class="logo-ar">إنجليش برو</span> --}}
+    </div>
+
     <div class="logo">
         {{-- <span class="logo-gaz">10% of the price of this course will be dedicated to supporting families in need in
             Gaza</span> --}}
@@ -1069,10 +1073,7 @@
         {{-- <span class="logo-ar">إنجليش برو</span> --}}
     </div>
 
-    <div class="logo">
-        <span class="logo-en">Arabic PRO</span>
-        {{-- <span class="logo-ar">إنجليش برو</span> --}}
-    </div>
+    <a href="#" class="nav-cta">ENROLL NOW</a>
 </nav>
 
 {{-- HERO --}}
@@ -1444,7 +1445,7 @@
 
 {{-- FOOTER --}}
 <footer>
-    <span class="footer-logo">Arabic PRO</span>
+    <span class="footer-logo">Obada-Ar</span>
     <span class="footer-logo-ar">تعلّم بثقة</span>
     <p class="footer-copy">© {{ date('Y') }} ALL RIGHTS RESERVED ✦ جميع الحقوق محفوظة</p>
 </footer>

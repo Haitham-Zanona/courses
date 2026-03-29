@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Enroll Now — Arabic Pro')
+@section('title', 'Enroll Now — Obada-Ar')
 
 @section('styles')
 <style>
@@ -568,7 +568,7 @@
 {{-- NAVBAR --}}
 <nav class="navbar">
     <div class="logo">
-        <span class="logo-en">ARABIC PRO</span>
+        <span class="logo-en">Obada-Ar</span>
         <span class="logo-ar">عربك برو</span>
     </div>
     <a href="{{ route('home') }}" class="back-link">
@@ -599,7 +599,7 @@
             <div class="course-card">
                 <div class="course-thumb">ع</div>
                 <div>
-                    <div class="course-info-title">ARABIC PRO — BEGINNER'S COURSE</div>
+                    <div class="course-info-title">Obada-Ar — BEGINNER'S COURSE</div>
                     <span class="course-info-sub">كورس العربية الشامل للمبتدئين</span>
                     <div class="course-info-tags">
                         <span class="tag">BEGINNER</span>
@@ -700,7 +700,7 @@
 
 {{-- FOOTER --}}
 <footer class="checkout-footer">
-    <p>© {{ date('Y') }} ARABIC PRO — ALL RIGHTS RESERVED &nbsp;·&nbsp;
+    <p>© {{ date('Y') }} Obada-Ar — ALL RIGHTS RESERVED &nbsp;·&nbsp;
         <a href="{{ route('home') }}">Back to Course</a>
     </p>
 </footer>

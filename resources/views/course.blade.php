@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'My Course — Arabic Pro')
+@section('title', 'My Course — Obada-Ar')
 
 @section('styles')
 <style>
@@ -27,12 +27,15 @@
         --border: #2a2418;
     }
 
+    html,
     body {
         font-family: 'Lato', sans-serif;
-        background: var(--bg);
-        color: var(--text);
+        background: #080808 !important;
+        color: #F0EAD6 !important;
         direction: ltr;
         min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
     }
 
     /* Geo bg */
@@ -40,10 +43,33 @@
         position: fixed;
         inset: 0;
         pointer-events: none;
-        opacity: 0.02;
+        z-index: 0;
+        opacity: 0.035;
+
         background-image:
-            repeating-linear-gradient(0deg, var(--gold) 0px, transparent 1px, transparent 60px),
-            repeating-linear-gradient(90deg, var(--gold) 0px, transparent 1px, transparent 60px);
+            /* خطوط أفقية */
+            repeating-linear-gradient(0deg,
+                var(--gold) 0px,
+                transparent 1px,
+                transparent 60px),
+
+            /* خطوط عمودية */
+            repeating-linear-gradient(90deg,
+                var(--gold) 0px,
+                transparent 1px,
+                transparent 60px),
+
+            /* خطوط مائلة 45° */
+            repeating-linear-gradient(45deg,
+                var(--gold) 0px,
+                transparent 1px,
+                transparent 85px),
+
+            /* خطوط مائلة -45° */
+            repeating-linear-gradient(-45deg,
+                var(--gold) 0px,
+                transparent 1px,
+                transparent 85px);
     }
 
     /* Navbar */
@@ -334,9 +360,9 @@
 
 {{-- Navbar --}}
 <nav class="navbar">
-    <span class="logo-en">ARABIC PRO</span>
+    <span class="logo-en">Obada-Ar</span>
     <div class="nav-right">
-        <span class="nav-student">Welcome, <span>{{ $student->name }}</span></span>
+        <span class="nav-student">Welcome, <span>{{ $student->name ?? '' }}</span></span>
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit" class="btn-logout">LOGOUT</button>
@@ -349,7 +375,7 @@
     {{-- Welcome bar --}}
     <div class="welcome-bar">
         <div>
-            <div class="welcome-text">YOUR COURSE IS READY, <span>{{ strtoupper($student->name) }}</span></div>
+            <div class="welcome-text">YOUR COURSE IS READY, <span>{{ strtoupper($student->name ?? '') }}</span></div>
             <div class="welcome-ar">كورسك جاهز — ابدأ رحلتك مع العربية</div>
         </div>
         <span style="font-family:'Amiri',serif; color:var(--gold); font-size:1.5rem;">مرحباً</span>
@@ -381,7 +407,7 @@
         <div class="pdf-info">
             <span class="pdf-icon">📄</span>
             <div>
-                <div class="pdf-title">ARABIC PRO — COURSE BOOK</div>
+                <div class="pdf-title">Obada-Ar — COURSE BOOK</div>
                 <div class="pdf-sub">Downloadable PDF · Print anytime</div>
             </div>
         </div>
@@ -423,10 +449,10 @@
     {{-- Gaza note --}}
     <div class="gaza-note">
         <p>
-            <strong>10%</strong> of your payment has been donated to supporting
-            families in need in Gaza. Thank you for making a difference.
+            <strong>10%</strong> of your payment has been donated to supporting the children of Gaza. Thank you for
+            making a difference.
         </p>
-        <span class="ar">١٠٪ من دفعتك تذهب لدعم العائلات المحتاجة في غزة — شكراً لك</span>
+        <span class="ar">١٠٪ من دفعتك تذهب لدعم أطفال غزة — شكراً لك</span>
     </div>
 
 </div>
