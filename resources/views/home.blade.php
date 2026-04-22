@@ -1093,7 +1093,7 @@
         {{-- <span class="logo-ar">إنجليش برو</span> --}}
     </div>
 
-    <a href="#" class="nav-cta">ENROLL NOW</a>
+    <a href="{{ route('checkout') }}" class="nav-cta">ENROLL NOW</a>
 </nav>
 
 {{-- HERO --}}
@@ -1139,7 +1139,7 @@
             <span class="ornament-symbol">❖</span>
         </div>
 
-        <a href="#" class="btn-main">
+        <a href="{{ route('checkout') }}" class="btn-main">
             ENROLL NOW
             <span class="btn-main-ar">سجّل الآن</span>
         </a>
@@ -1281,7 +1281,7 @@
     <p style="font-family:'Amiri',serif; color:var(--text-muted); font-size:1.1rem; margin-bottom:24px; direction:rtl;">
         لا تؤجّل تعلّمك — ابدأ اليوم
     </p>
-    <a href="#" class="btn-main">
+    <a href="{{ route('checkout') }}" class="btn-main">
         SECURE YOUR SPOT
         <span class="btn-main-ar">احجز مقعدك الآن</span>
     </a>
@@ -1377,7 +1377,7 @@
                 <li>Email support included</li>
             </ul>
 
-            <a href="#" class="btn-main"
+            <a href="{{ route('checkout') }}" class="btn-main"
                 style="width: 100%; display: block; text-align: center; clip-path: none; border-radius: 2px;">
                 BUY NOW — $49
                 <span class="btn-main-ar">اشتري الآن بـ ٤٩ دولار</span>
@@ -1456,7 +1456,7 @@
         <p class="final-cta-subtitle">جاهز تبدأ رحلتك مع العربية؟</p>
         <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:36px; letter-spacing:1px;">JOIN 500+ STUDENTS
             WHO ALREADY STARTED</p>
-        <a href="#" class="btn-main">
+        <a href="{{ route('checkout') }}" class="btn-main">
             START NOW — $49
             <span class="btn-main-ar">ابدأ الآن</span>
         </a>

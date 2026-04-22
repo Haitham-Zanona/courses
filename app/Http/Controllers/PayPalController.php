@@ -74,15 +74,17 @@ class PayPalController extends Controller
             $username = $this->generateUsername();
             $password = $this->generatePassword();
 
-            // ── حفظ الطالب في قاعدة البيانات ──
-            Student::create([
-                'name'            => $payerName,
-                'email'           => $payerEmail,
-                'username'        => $username,
-                'password'        => Hash::make($password),
-                'paypal_order_id' => $orderId,
-                'is_active'       => true,
-            ]);
+            // البحث عن الطالب بالإيميل، إذا وجده يحدث بياناته، وإذا لم يجده ينشئ حساباً جديداً
+            Student::updateOrCreate(
+                ['email' => $payerEmail], // شرط البحث
+                [
+                    'name'            => $payerName,
+                    'username'        => $username,
+                    'password'        => Hash::make($password),
+                    'paypal_order_id' => $orderId,
+                    'is_active'       => true,
+                ]
+            );
 
             // ── إرسال الإيميل مع بيانات الدخول والـ PDF ──
             Mail::to($payerEmail)->send(

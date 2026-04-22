@@ -34,10 +34,17 @@ class StudentCredentialsMail extends Mailable
 
     public function attachments(): array
     {
-        return [
-            Attachment::fromPath(public_path('files/arabic-pro-course.pdf'))
-                ->as('Obada-Ar Course.pdf')
-                ->withMime('application/pdf'),
-        ];
+        $filePath = public_path('files/arabic-pro-course.pdf');
+
+        // نتحقق من وجود الملف قبل محاولة إرفاقه لتجنب انهيار الموقع بعد الدفع
+        if (file_exists($filePath)) {
+            return [
+                Attachment::fromPath($filePath)
+                    ->as('Obada-Ar Course.pdf')
+                    ->withMime('application/pdf'),
+            ];
+        }
+
+        return [];
     }
 }

@@ -122,6 +122,33 @@
         .gaza-note strong {
             color: #D4AF37;
         }
+
+        /* الإعدادات الافتراضية للشاشات الكبيرة موجودة عندك مسبقاً */
+
+        @media (max-width: 600px) {
+            .cred-row {
+                /* تغيير اتجاه العناصر لتصبح عمودية */
+                flex-direction: column;
+                /* محاذاة العناصر لتبدأ من اليسار (العنوان سيكون فوق يسار) */
+                align-items: flex-start;
+                padding: 12px 0;
+            }
+
+            .cred-label {
+                /* التأكد من أن العنوان في السطر الأول جهة اليسار */
+                margin-bottom: 4px;
+            }
+
+            .cred-value {
+                /* جعل القيمة في السطر الثاني مع إزاحة (margin) لجهة اليمين */
+                align-self: flex-end;
+                /* دفع العنصر لأقصى اليمين */
+                color: #D4AF37;
+                font-size: 1.1rem;
+                /* تكبير الخط قليلاً لسهولة القراءة على الموبايل */
+                text-align: right;
+            }
+        }
     </style>
 </head>
 

@@ -590,6 +590,13 @@
     {{-- GRID --}}
     <div class="checkout-grid">
 
+        @if(session('error'))
+        <div
+            style="background: rgba(255,0,0,0.1); border: 1px solid #ff4444; color: #ff4444; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+            {{ session('error') }}
+        </div>
+        @endif
+
         {{-- LEFT: ORDER SUMMARY --}}
         <div class="summary-box fade-up">
 
@@ -650,6 +657,13 @@
         {{-- RIGHT: PAYMENT --}}
         <div class="payment-box fade-up">
 
+            @if(session('error'))
+            <div
+                style="background: rgba(255,0,0,0.1); border: 1px solid #ff4444; color: #ff4444; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-size: 0.9rem; text-align: center;">
+                {{ session('error') }}
+            </div>
+            @endif
+
             <div class="payment-label">Secure Payment</div>
 
             {{-- Gumroad button --}}
@@ -658,10 +672,12 @@
             مثال: https://abadapro.gumroad.com/l/arabic-course
             أو لو تبي Overlay أضف class="gumroad-button" وحط السكريبت في الأسفل
             --}}
-            <a href="https://gumroad.com/l/YOUR_PRODUCT_ID" class="btn-gumroad gumroad-button"
-                data-gumroad-single-product="true">
-                ENROLL NOW — $49
-                <span class="btn-gumroad-ar">سجّل الآن — ٤٩ دولار</span>
+            {{-- PayPal Payment Button --}}
+            <a href="{{ route('paypal.payment') }}" class="btn-gumroad"
+                style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #D4AF37; color: #000; font-weight: bold; padding: 15px; border-radius: 8px;">
+                <span style="font-size: 1.2rem;">PAY WITH PAYPAL — $49</span>
+                <span style="font-family: 'Amiri', serif; font-size: 1rem; margin-top: 5px;">ادفع بواسطة بايبال — ٤٩
+                    دولار</span>
             </a>
             <p class="btn-sub">✦ INSTANT ACCESS AFTER PAYMENT ✦</p>
 
@@ -709,7 +725,7 @@
 
 @section('scripts')
 {{-- Gumroad Overlay Script --}}
-<script src="https://gumroad.com/js/gumroad.js"></script>
+{{-- <script src="https://gumroad.com/js/gumroad.js"></script> --}}
 
 <script>
     // Fade up on scroll
