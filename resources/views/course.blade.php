@@ -360,7 +360,7 @@
 
 {{-- Navbar --}}
 <nav class="navbar">
-    <span class="logo-en">Obada-Ar</span>
+    <span class="logo-en"><a href="{{ route('home') }}">Obada-Ar</a></span>
     <div class="nav-right">
         <span class="nav-student">Welcome, <span>{{ $student->name ?? '' }}</span></span>
         <form method="POST" action="{{ route('logout') }}">

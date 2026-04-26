@@ -590,12 +590,12 @@
     {{-- GRID --}}
     <div class="checkout-grid">
 
-        @if(session('error'))
+        {{-- @if(session('error'))
         <div
             style="background: rgba(255,0,0,0.1); border: 1px solid #ff4444; color: #ff4444; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
             {{ session('error') }}
         </div>
-        @endif
+        @endif --}}
 
         {{-- LEFT: ORDER SUMMARY --}}
         <div class="summary-box fade-up">

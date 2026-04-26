@@ -1093,7 +1093,9 @@
         {{-- <span class="logo-ar">إنجليش برو</span> --}}
     </div>
 
-    <a href="{{ route('checkout') }}" class="nav-cta">ENROLL NOW</a>
+    <div>
+        <a href="{{ route('checkout') }}" class="nav-cta">ENROLL NOW</a>
+    </div>
 </nav>
 
 {{-- HERO --}}

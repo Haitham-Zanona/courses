@@ -52,10 +52,23 @@
         z-index: 1;
     }
 
+    .checkrad {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
     .check {
-        font-size: 3rem;
-        margin-bottom: 16px;
-        display: block;
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(145deg, #2a2418, #161616);
+        border: 2px solid #D4AF37;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
     }
 
     .logo {
@@ -147,7 +160,10 @@
 @section('content')
 <div class="geo-bg"></div>
 <div class="card">
-    <span class="check">✅</span>
+    <div class="checkrad">
+        <div class="check">
+            ✒️ </div>
+    </div>
     <span class="logo">Obada-Ar</span>
     <span class="logo-ar">تعلّم العربية مع عبادة</span>
     <div class="ornament"><span>❖</span></div>
