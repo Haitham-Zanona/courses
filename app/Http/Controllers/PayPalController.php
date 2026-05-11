@@ -87,12 +87,14 @@ class PayPalController extends Controller
             );
 
             // ── إرسال الإيميل مع بيانات الدخول والـ PDF ──
+            $pdfUrl = asset('files/arabic-pro-course.pdf');
             Mail::to($payerEmail)->send(
-                new StudentCredentialsMail($payerName, $username, $password)
+                new StudentCredentialsMail($payerName, $username, $password, $pdfUrl)
             );
 
             return redirect()->route('thank-you')
                 ->with('payer_name', $payerName);
+
         }
 
         return redirect()->route('checkout')

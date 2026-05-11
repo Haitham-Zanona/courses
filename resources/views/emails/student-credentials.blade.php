@@ -98,6 +98,20 @@
             margin: 24px 0;
         }
 
+        .btn-pdf {
+            display: inline-block;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+            text-align: center;
+            padding: 10px 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-decoration: none;
+            margin-top: 12px;
+            transition: all 0.3s;
+        }
+
         .footer-note {
             font-size: 0.78rem;
             color: #4a4030;
@@ -185,9 +199,20 @@
 
         <hr class="divider">
 
-        <p style="font-size:0.85rem;">
+        {{-- <p style="font-size:0.85rem; margin-bottom: 0;">
             📎 Your course PDF is attached to this email — you can download and print it anytime.
-        </p>
+        </p> --}}
+
+        <div style="margin: 24px 0; text-align: center;">
+            <p style="font-size:0.85rem; margin-bottom: 0;">
+                📎 Your course PDF is attached to this email — you can download and print it anytime.
+            </p>
+            {{-- تأكد من تمرير رابط الملف بشكل صحيح من الـ Controller --}}
+            <a href="{{ $pdfUrl ?? '#' }}" class="btn-pdf">
+                DOWNLOAD PDF GUIDE ↓
+            </a>
+        </div>
+
 
         <div class="gaza-note">
             <p>

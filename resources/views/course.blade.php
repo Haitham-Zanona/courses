@@ -198,6 +198,9 @@
         border: 1px solid rgba(212, 175, 55, 0.3);
         margin-bottom: 40px;
         position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        /* يغني عن استخدام padding-top */
         overflow: hidden;
     }
 
@@ -205,13 +208,13 @@
         content: '';
         display: block;
         padding-top: 56.25%;
-        /* 16:9 */
     }
 
     .video-wrap iframe,
     .video-wrap video {
         position: absolute;
-        inset: 0;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         border: none;
@@ -381,24 +384,23 @@
         <span style="font-family:'Amiri',serif; color:var(--gold); font-size:1.5rem;">مرحباً</span>
     </div>
 
-    {{-- Video --}}
+    {{-- Video Section --}}
     <span class="section-label">الدرس الرئيسي</span>
     <h2 class="section-title">COURSE VIDEO</h2>
     <span class="section-title-ar">فيديو الكورس الشامل</span>
 
     <div class="video-wrap">
-        {{--
-        ⚠️ استبدل الرابط برابط الفيديو الخاص فيك
-        لو Vimeo: src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-        لو YouTube: src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-        لو ملف محلي: <video controls>
-            <source src="{{ asset('videos/course.mp4') }}">
-        </video>
-        --}}
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen>
+        {{-- هنا وضعنا كود Bunny مباشرة دون تغليفه بطبقات إضافية --}}
+
+        <div style="position: absolute; inset: 0; z-index: 1; pointer-events: none;"></div>
+
+        <iframe
+            src="https://player.mediadelivery.net/embed/656839/19840ebd-c474-4413-b997-ff57260903ad?autoplay=true&loop=false&muted=false&preload=true&responsive=true"
+            loading="lazy" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+            allowfullscreen="true">
         </iframe>
     </div>
+
 
     {{-- PDF Download --}}
     <div class="ornament"><span>❖</span></div>

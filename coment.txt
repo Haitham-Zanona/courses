@@ -1,0 +1,58 @@
+{{-- Video --}}
+    {{-- <span class="section-label">الدرس الرئيسي</span>
+    <h2 class="section-title">COURSE VIDEO</h2>
+    <span class="section-title-ar">فيديو الكورس الشامل</span>
+
+    <div class="video-wrap">
+
+        <iframe src="https://www.youtube.com/watch?v=xmA6dDB2exs"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen>
+        </iframe>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xmA6dDB2exs?si=aoBxn_PtLY1OqNlr"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div class="video-container" style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
+            <iframe
+                style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border: none;"
+                src="https://www.youtube.com/embed/xmA6dDB2exs?rel=0&modestbranding=1&showinfo=0&controls=1&disablekb=1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <!-- طبقة شفافة لمنع الضغط يمين فوق الفيديو -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 80px; z-index: 10;"></div>
+        </div>
+    </div> --}}
+
+    {{-- Video Section --}}
+    <span class="section-label">الدرس الرئيسي</span>
+    <h2 class="section-title">COURSE VIDEO</h2>
+    <span class="section-title-ar">فيديو الكورس الشامل</span>
+
+    <div class="video-wrap"
+        style="position: relative; background: #000; border: 1px solid rgba(212, 175, 55, 0.3); line-height: 0;">
+        {{-- الطبقة الشفافة لحماية العنوان ومنع النقر يمين --}}
+        {{-- <div style="position: absolute; top: 0; left: 0; width: 100%; height: 60px; z-index: 10; cursor: default;">
+        </div> --}}
+
+        {{-- <iframe
+            src="https://www.youtube.com/embed/xmA6dDB2exs?rel=0&modestbranding=1&controls=1&showinfo=0&iv_load_policy=3"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen style="width: 100%; aspect-ratio: 16/9; border: none; display: block;">
+        </iframe> --}}
+
+        {{-- طبقة حماية سفلية لمنع الضغط على شعار يوتيوب --}}
+        {{-- <div
+            style="position: absolute; bottom: 0; right: 0; width: 150px; height: 50px; z-index: 10; cursor: default;">
+        </div> --}}
+
+        <div style="position:relative;padding-top:56.25%;"><iframe
+                src="https://player.mediadelivery.net/embed/656839/19840ebd-c474-4413-b997-ff57260903ad?autoplay=true&loop=false&muted=false&preload=true&responsive=true"
+                loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;"
+                allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+                allowfullscreen="true"></iframe>
+        </div>
+
+    </div>

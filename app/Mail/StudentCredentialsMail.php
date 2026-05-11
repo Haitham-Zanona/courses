@@ -16,6 +16,8 @@ class StudentCredentialsMail extends Mailable
         public string $studentName,
         public string $username,
         public string $password,
+        public string $pdfUrl,
+
     ) {}
 
     public function envelope(): Envelope
@@ -29,6 +31,7 @@ class StudentCredentialsMail extends Mailable
     {
         return new Content(
             view: 'emails.student-credentials',
+            // view: 'emails.email-test',
         );
     }
 

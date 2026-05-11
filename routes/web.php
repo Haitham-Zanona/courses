@@ -40,4 +40,13 @@ Route::get('/course', [StudentAuthController::class, 'course'])
 
 Route::get('/checkout', [App\Http\Controllers\PayPalController::class, 'index'])->name('checkout');
 
+// Route::get('/email', function () {
+//     return view('emails.student-credentials', [
+//         'studentName' => 'John Doe',
+//         'username'    => 'johndoe',
+//         'password'    => 'password123',
+//         'pdfUrl'      => asset('files/arabic-pro-course.pdf'),
+//     ]);
+// });
+
 require __DIR__ . '/auth.php';
