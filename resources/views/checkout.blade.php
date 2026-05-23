@@ -35,6 +35,7 @@
         line-height: 1.8;
         overflow-x: hidden;
         direction: ltr;
+        padding-top: 70px;
     }
 
     /* ── GEO BG ── */
@@ -59,8 +60,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: sticky;
+        position: fixed;
         top: 0;
+        left: 0;
+        width: 100%;
         z-index: 100;
         backdrop-filter: blur(10px);
     }
@@ -331,7 +334,7 @@
     }
 
     .price-row .strike {
-        text-decoration: line-through;
+        /* text-decoration: line-through; */
         color: var(--text-muted);
         font-size: 0.8rem;
     }
@@ -569,10 +572,10 @@
 <nav class="navbar">
     <div class="logo">
         <span class="logo-en">Obada-Ar</span>
-        <span class="logo-ar">عربك برو</span>
+        {{-- <span class="logo-ar">عربك برو</span> --}}
     </div>
     <a href="{{ route('home') }}" class="back-link">
-        ← BACK TO COURSE
+        ← BACK TO HOME
     </a>
 </nav>
 
@@ -633,14 +636,14 @@
             <div class="price-breakdown">
                 <div class="price-row">
                     <span>Original Price</span>
-                    <span class="strike">$99.00</span>
+                    <span class="strike">$49.00</span>
                 </div>
-                <div class="price-row">
+                {{-- <div class="price-row">
                     <span>Discount</span>
                     <span class="discount">— $50.00</span>
-                </div>
+                </div> --}}
                 <div class="price-row total">
-                    <span>Total</span>
+                    <span>Price</span>
                     <span class="amount">$49</span>
                 </div>
             </div>

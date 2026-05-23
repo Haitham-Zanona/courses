@@ -35,18 +35,18 @@ Route::get('/thank-you', function () {
 
 // صفحة الكورس المحمية
 Route::get('/course', [StudentAuthController::class, 'course'])
-    ->middleware('student.auth')
+// ->middleware('student.auth')
     ->name('course');
 
 Route::get('/checkout', [App\Http\Controllers\PayPalController::class, 'index'])->name('checkout');
 
-// Route::get('/email', function () {
-//     return view('emails.student-credentials', [
-//         'studentName' => 'John Doe',
-//         'username'    => 'johndoe',
-//         'password'    => 'password123',
-//         'pdfUrl'      => asset('files/arabic-pro-course.pdf'),
-//     ]);
-// });
+Route::get('/email', function () {
+    return view('emails.student-credentials', [
+        'studentName' => 'John Doe',
+        'username'    => 'johndoe',
+        'password'    => 'password123',
+        'pdfUrl'      => asset('files/arabic-pro-course.pdf'),
+    ]);
+});
 
 require __DIR__ . '/auth.php';

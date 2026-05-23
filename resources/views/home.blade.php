@@ -96,10 +96,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: sticky;
+        position: fixed;
         top: 0;
+        left: 0;
+        width: 100%;
         z-index: 100;
         backdrop-filter: blur(10px);
+    }
+
+    body {
+        padding-top: 70px;
     }
 
     .logo {
@@ -131,6 +137,37 @@
         font-size: 1.1rem;
         color: rgba(212, 175, 55, 0.5);
         letter-spacing: 0;
+    }
+
+    .logo-mobile {
+        height: 38px;
+        width: auto;
+        display: none;
+        object-fit: contain;
+        /* background-color: #000; */
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-login {
+        font-family: 'Cinzel', serif;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--gold);
+        border: 1px solid rgba(212, 175, 55, 0.45);
+        padding: 8px 18px;
+        border-radius: 2px;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+    }
+
+    .nav-login:hover {
+        background: rgba(212, 175, 55, 0.08);
+        border-color: var(--gold);
     }
 
     .nav-cta {
@@ -837,7 +874,7 @@
 
     .price-old {
         color: var(--text-muted);
-        text-decoration: line-through;
+        /* text-decoration: line-through; */
         font-size: 1rem;
         letter-spacing: 1px;
         margin-bottom: 4px;
@@ -1059,13 +1096,26 @@
             display: none;
         }
 
+        .logo-en {
+            display: none;
+        }
+
+        .logo-mobile {
+            display: block;
+        }
+
         .logo-gaz {
-            font-size: 8px;
-            letter-spacing: 1px;
+            font-size: 0.62rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-login {
+            font-size: 0.72rem;
+            padding: 6px 12px;
         }
 
         .navbar {
-            padding: 12px 6px;
+            padding: 12px 16px;
         }
 
         .hero {
@@ -1083,17 +1133,15 @@
 <nav class="navbar">
     <div class="logo">
         <span class="logo-en">Obada-Ar</span>
-        {{-- <span class="logo-ar">إنجليش برو</span> --}}
+        <img class="logo-mobile" src="{{ asset('images/logo-p.png') }}" alt="Obada-Ar">
     </div>
 
     <div class="logo">
-        {{-- <span class="logo-gaz">10% of the price of this course will be dedicated to supporting families in need in
-            Gaza</span> --}}
         <span class="logo-gaz">10% of proceeds support Gaza’s children</span>
-        {{-- <span class="logo-ar">إنجليش برو</span> --}}
     </div>
 
-    <div>
+    <div class="nav-actions">
+        <a href="{{ route('login') }}" class="nav-login">LOGIN</a>
         <a href="{{ route('checkout') }}" class="nav-cta">ENROLL NOW</a>
     </div>
 </nav>
@@ -1366,8 +1414,8 @@
         <div class="section-title-ar">استثمر في نفسك اليوم</div>
 
         <div class="price-box">
-            <div class="price-label-ar">عرض محدود — لا تفوّته</div>
-            <div class="price-old">Original Price: $99</div>
+            <div class="price-label-ar">اشتري الآن</div>
+            <div class="price-old">Original Price: $49</div>
             <div class="price-amount">$49</div>
             <div class="price-period">ONE-TIME PAYMENT · LIFETIME ACCESS</div>
 
