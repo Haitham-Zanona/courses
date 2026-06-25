@@ -39,38 +39,17 @@
         padding-top: 65px;
     }
 
-    /* Geo bg */
     .geo-bg {
         position: fixed;
         inset: 0;
         pointer-events: none;
         z-index: 0;
         opacity: 0.035;
-
         background-image:
-            /* خطوط أفقية */
-            repeating-linear-gradient(0deg,
-                var(--gold) 0px,
-                transparent 1px,
-                transparent 60px),
-
-            /* خطوط عمودية */
-            repeating-linear-gradient(90deg,
-                var(--gold) 0px,
-                transparent 1px,
-                transparent 60px),
-
-            /* خطوط مائلة 45° */
-            repeating-linear-gradient(45deg,
-                var(--gold) 0px,
-                transparent 1px,
-                transparent 85px),
-
-            /* خطوط مائلة -45° */
-            repeating-linear-gradient(-45deg,
-                var(--gold) 0px,
-                transparent 1px,
-                transparent 85px);
+            repeating-linear-gradient(0deg, var(--gold) 0px, transparent 1px, transparent 60px),
+            repeating-linear-gradient(90deg, var(--gold) 0px, transparent 1px, transparent 60px),
+            repeating-linear-gradient(45deg, var(--gold) 0px, transparent 1px, transparent 85px),
+            repeating-linear-gradient(-45deg, var(--gold) 0px, transparent 1px, transparent 85px);
     }
 
     /* Navbar */
@@ -91,10 +70,14 @@
 
     .logo-en {
         font-family: 'Cinzel', serif;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 900;
         color: var(--gold);
         letter-spacing: 2px;
+    }
+
+    .logo-en a {
+        color: inherit;
     }
 
     .nav-right {
@@ -130,7 +113,7 @@
         border-color: var(--gold);
     }
 
-    /* Page content */
+    /* Page */
     .page-wrap {
         max-width: 960px;
         margin: 0 auto;
@@ -154,7 +137,7 @@
 
     .welcome-text {
         font-family: 'Cinzel', serif;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         letter-spacing: 1px;
     }
 
@@ -162,40 +145,23 @@
         color: var(--gold);
     }
 
-    .welcome-ar {
-        font-family: 'Amiri', serif;
-        color: rgba(212, 175, 55, 0.4);
-        font-size: 0.9rem;
-        direction: rtl;
+    .welcome-sub {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-top: 4px;
+        letter-spacing: 0.5px;
     }
 
     /* Section title */
-    .section-label {
-        font-family: 'Amiri', serif;
-        color: var(--gold);
-        font-size: 1rem;
-        display: block;
-        margin-bottom: 4px;
-    }
-
     .section-title {
         font-family: 'Cinzel', serif;
         font-size: 1.6rem;
         font-weight: 900;
         letter-spacing: 1px;
-        margin-bottom: 4px;
+        margin-bottom: 24px;
     }
 
-    .section-title-ar {
-        font-family: 'Amiri', serif;
-        color: rgba(212, 175, 55, 0.4);
-        font-size: 1rem;
-        direction: rtl;
-        margin-bottom: 28px;
-        display: block;
-    }
-
-    /* Video box */
+    /* Video */
     .video-wrap {
         background: #000;
         border: 1px solid rgba(212, 175, 55, 0.3);
@@ -203,18 +169,10 @@
         position: relative;
         width: 100%;
         aspect-ratio: 16 / 9;
-        /* يغني عن استخدام padding-top */
         overflow: hidden;
     }
 
-    .video-wrap::before {
-        content: '';
-        display: block;
-        padding-top: 56.25%;
-    }
-
-    .video-wrap iframe,
-    .video-wrap video {
+    .video-wrap iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -245,7 +203,7 @@
         font-size: 1.1rem;
     }
 
-    /* PDF download */
+    /* PDF */
     .pdf-box {
         background: var(--bg3);
         border: 1px solid var(--border);
@@ -300,7 +258,7 @@
         transform: translateY(-1px);
     }
 
-    /* Topics grid */
+    /* Topics */
     .topics-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -324,12 +282,17 @@
     }
 
     .topic-num {
-        font-family: 'Amiri', serif;
+        font-family: 'Cinzel', serif;
         color: var(--gold);
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-weight: 700;
         flex-shrink: 0;
         min-width: 24px;
+    }
+
+    .topic-name {
+        font-weight: 700;
+        font-size: 0.85rem;
     }
 
     /* Gaza note */
@@ -350,13 +313,67 @@
         color: var(--gold);
     }
 
-    .gaza-note .ar {
-        font-family: 'Amiri', serif;
-        color: rgba(212, 175, 55, 0.3);
-        font-size: 0.9rem;
-        display: block;
-        margin-top: 4px;
-        direction: rtl;
+    @media (max-width: 768px) {
+
+        html,
+        body {
+            padding-top: 50px;
+        }
+
+        .navbar {
+            padding: 10px 14px;
+        }
+
+        .logo-en {
+            font-size: 1.1rem;
+        }
+
+        .nav-student {
+            display: none;
+        }
+
+        .page-wrap {
+            padding: 32px 16px 60px;
+        }
+
+        .welcome-bar {
+            padding: 16px;
+        }
+
+        .welcome-text {
+            font-size: 0.78rem;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+
+        .pdf-box {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .btn-download {
+            width: 100%;
+            text-align: center;
+        }
+
+        .topics-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 420px) {
+        .topics-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .logo-en {
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
     }
 </style>
 @endsection
@@ -382,28 +399,24 @@
     <div class="welcome-bar">
         <div>
             <div class="welcome-text">YOUR COURSE IS READY, <span>{{ strtoupper($student->name ?? '') }}</span></div>
-            <div class="welcome-ar">كورسك جاهز — ابدأ رحلتك مع العربية</div>
+            <div class="welcome-sub">Begin your Arabic journey — all materials are below.</div>
         </div>
-        <span style="font-family:'Amiri',serif; color:var(--gold); font-size:1.5rem;">مرحباً</span>
+        <span style="font-family:'Cinzel',serif; color:var(--gold); font-size:1rem; letter-spacing:2px;">WELCOME</span>
     </div>
 
     {{-- Video Section --}}
-    <span class="section-label">الدرس الرئيسي</span>
     <h2 class="section-title">COURSE VIDEO</h2>
-    <span class="section-title-ar">فيديو الكورس الشامل</span>
 
     <div class="video-wrap">
-        {{-- هنا وضعنا كود Bunny مباشرة دون تغليفه بطبقات إضافية --}}
-
-        <div style="position: absolute; inset: 0; z-index: 1; pointer-events: none;"></div>
-
-        <iframe
-            src="https://player.mediadelivery.net/embed/656839/19840ebd-c474-4413-b997-ff57260903ad?autoplay=true&loop=false&muted=false&preload=true&responsive=true"
-            loading="lazy" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-            allowfullscreen="true">
+        {{--
+        Google Drive embed — replace GOOGLE_DRIVE_FILE_ID with the actual file ID.
+        Get the ID from your Drive share link:
+        https://drive.google.com/file/d/GOOGLE_DRIVE_FILE_ID/view
+        --}}
+        <iframe src="https://drive.google.com/file/d/1ndyxn9cVXwtHlyrKlU6KCXOVdNIIb8s0/preview"
+            allow="autoplay" allowfullscreen>
         </iframe>
     </div>
-
 
     {{-- PDF Download --}}
     <div class="ornament"><span>❖</span></div>
@@ -422,31 +435,25 @@
     </div>
 
     {{-- Topics --}}
-    <span class="section-label">محتوى الكورس</span>
     <h2 class="section-title">COURSE TOPICS</h2>
-    <span class="section-title-ar">المواضيع اللي هتتعلمها</span>
 
     <div class="topics-grid">
         @foreach([
-        ['١', 'The Arabic Alphabet', 'حروف الأبجدية'],
-        ['٢', 'Daily Expressions', 'العبارات اليومية'],
-        ['٣', 'Days of the Week', 'أيام الأسبوع'],
-        ['٤', 'Numbers & Counting', 'الأرقام والعدّ'],
-        ['٥', 'Telling the Time', 'السؤال عن الوقت'],
-        ['٦', 'At the Market', 'في السوق'],
-        ['٧', 'Time & Place', 'الوقت والمكان'],
-        ['٨', 'Family Vocabulary', 'مفردات العائلة'],
-        ['٩', 'Colors & Descriptions', 'الألوان والأوصاف'],
-        ['١٠','Around the House', 'مفردات المنزل'],
-        ['١١','Food & Meals', 'الطعام والوجبات'],
-        ] as [$num, $en, $ar])
+        ['1', 'The Arabic Alphabet'],
+        ['2', 'Daily Expressions'],
+        ['3', 'Days of the Week'],
+        ['4', 'Numbers & Counting'],
+        ['5', 'Telling the Time'],
+        ['6', 'At the Market'],
+        ['7', 'Time & Place'],
+        ['8', 'Family Vocabulary'],
+        ['9', 'Colors & Descriptions'],
+        ['10', 'Around the House'],
+        ['11', 'Food & Meals'],
+        ] as [$num, $title])
         <div class="topic-item">
             <span class="topic-num">{{ $num }}</span>
-            <div>
-                <div style="font-weight:700; font-size:0.85rem;">{{ $en }}</div>
-                <div style="font-family:'Amiri',serif; color:rgba(212,175,55,0.4); font-size:0.8rem; direction:rtl;">{{
-                    $ar }}</div>
-            </div>
+            <div class="topic-name">{{ $title }}</div>
         </div>
         @endforeach
     </div>
@@ -454,10 +461,9 @@
     {{-- Gaza note --}}
     <div class="gaza-note">
         <p>
-            <strong>10%</strong> of your payment has been donated to supporting the children of Gaza. Thank you for
-            making a difference.
+            <strong>10%</strong> of your payment has been donated to supporting the children of Gaza.
+            Thank you for making a difference.
         </p>
-        <span class="ar">١٠٪ من دفعتك تذهب لدعم أطفال غزة — شكراً لك</span>
     </div>
 
 </div>

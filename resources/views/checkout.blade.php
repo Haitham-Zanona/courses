@@ -648,12 +648,6 @@
                 </div>
             </div>
 
-            {{-- Guarantee --}}
-            <div class="guarantee-bar">
-                <span class="icon">🛡</span>
-                <span>7-day money-back guarantee. If you are not satisfied, we will refund you in full — no questions
-                    asked.</span>
-            </div>
 
         </div>
 
@@ -677,10 +671,8 @@
             --}}
             {{-- PayPal Payment Button --}}
             <a href="{{ route('paypal.payment') }}" class="btn-gumroad"
-                style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #D4AF37; color: #000; font-weight: bold; padding: 15px; border-radius: 8px;">
+                style="text-decoration: none; display: flex; align-items: center; justify-content: center; background: #D4AF37; color: #000; font-weight: bold; padding: 15px; border-radius: 8px;">
                 <span style="font-size: 1.2rem;">PAY WITH PAYPAL — $49</span>
-                <span style="font-family: 'Amiri', serif; font-size: 1rem; margin-top: 5px;">ادفع بواسطة بايبال — ٤٩
-                    دولار</span>
             </a>
             <p class="btn-sub">✦ INSTANT ACCESS AFTER PAYMENT ✦</p>
 
@@ -700,7 +692,6 @@
                 <li><span class="t-icon">🔒</span> Secure 256-bit SSL encryption</li>
                 <li><span class="t-icon">⚡</span> Instant access after payment</li>
                 <li><span class="t-icon">📧</span> Download link sent to your email</li>
-                <li><span class="t-icon">🛡</span> 7-day money-back guarantee</li>
                 <li><span class="t-icon">♾</span> Lifetime access — yours forever</li>
             </ul>
 
@@ -710,7 +701,6 @@
                     <strong>10%</strong> of the price of this course will be dedicated to
                     supporting families in need in Gaza.
                 </p>
-                <span class="arabic">10% of proceeds support Gaza’s children</span>
             </div>
 
         </div>

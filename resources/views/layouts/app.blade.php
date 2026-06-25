@@ -7,12 +7,21 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'Obada-Ar')</title>
-    <link rel="icon" href="{{ asset('images/logo-p.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('images/logo-p.webp') }}" type="image/webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lato:wght@300;400;700&family=Amiri:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lato:wght@400;700&family=Amiri:wght@400&display=swap"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lato:wght@400;700&family=Amiri:wght@400&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    @yield('head')
 
     <style>
         *,
