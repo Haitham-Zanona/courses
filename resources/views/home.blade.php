@@ -387,6 +387,53 @@
         }
     }
 
+    /* Instructor frame in hero */
+    .instructor-frame {
+        position: relative;
+        width: 190px;
+        height: 190px;
+        margin: 0 auto 36px;
+    }
+
+    .instructor-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 50%;
+        border: 2px solid var(--gold);
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 36px rgba(212, 175, 55, 0.22), 0 0 80px rgba(212, 175, 55, 0.07);
+        display: block;
+    }
+
+    .instructor-frame::before {
+        content: '';
+        position: absolute;
+        inset: -9px;
+        border-radius: 50%;
+        border: 1px dashed rgba(212, 175, 55, 0.35);
+        animation: spin-slow 20s linear infinite;
+        z-index: 0;
+    }
+
+    .instructor-frame::after {
+        content: 'ع';
+        font-family: 'Amiri', serif;
+        position: absolute;
+        font-size: 11rem;
+        color: var(--gold);
+        opacity: 0.07;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 0;
+        font-weight: 700;
+        line-height: 1;
+    }
+
     /* Hero stats */
     .hero-stats {
         display: flex;
@@ -1258,6 +1305,10 @@
         <div class="hero-tag">COMPLETE BEGINNER'S COURSE</div>
 
         <h1>Master <span class="gold-text">Arabic</span><br>From Zero</h1>
+
+        <div class="instructor-frame">
+            <img src="{{ asset('images/Instructor.webp') }}" alt="Obada — Arabic Instructor" width="190" height="190">
+        </div>
 
         {{-- Price + CTA at top of page --}}
         <div class="hero-price-top">
