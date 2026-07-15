@@ -35,4 +35,6 @@ return [
         ],
     ],
 
+    'admin_email' => env('ADMIN_NOTIFICATION_EMAIL', 'contact@arabicwithobada.com'),
+
 ];

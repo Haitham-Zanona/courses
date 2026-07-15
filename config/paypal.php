@@ -17,6 +17,7 @@ return [
         'app_id'            => env('PAYPAL_LIVE_APP_ID', ''),
     ],
 
+    'webhook_id'     => env('PAYPAL_WEBHOOK_ID', ''), // Webhook ID from PayPal Developer Dashboard, used to verify incoming webhook signatures.
     'payment_action' => env('PAYPAL_PAYMENT_ACTION', 'Sale'), // Can only be 'Sale', 'Authorization' or 'Order'
     'currency'       => env('PAYPAL_CURRENCY', 'USD'),
     'notify_url'     => env('PAYPAL_NOTIFY_URL', ''), // Change this accordingly for your application.

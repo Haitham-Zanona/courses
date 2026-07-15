@@ -27,6 +27,7 @@ Route::post('/logout', [StudentAuthController::class, 'logout'])->name('logout')
 Route::get('paypal/payment', [PayPalController::class, 'payment'])->name('paypal.payment');
 Route::get('paypal/success', [PayPalController::class, 'paymentSuccess'])->name('paypal.success');
 Route::get('paypal/cancel', [PayPalController::class, 'paymentCancel'])->name('paypal.cancel');
+Route::post('paypal/webhook', [PayPalController::class, 'webhook'])->name('paypal.webhook');
 
 // صفحة الشكر بعد نجاح الدفع
 Route::get('/thank-you', function () {
@@ -35,18 +36,9 @@ Route::get('/thank-you', function () {
 
 // صفحة الكورس المحمية
 Route::get('/course', [StudentAuthController::class, 'course'])
-// ->middleware('student.auth')
+    ->middleware('student.auth')
     ->name('course');
 
 Route::get('/checkout', [App\Http\Controllers\PayPalController::class, 'index'])->name('checkout');
-
-Route::get('/email', function () {
-    return view('emails.student-credentials', [
-        'studentName' => 'John Doe',
-        'username'    => 'johndoe',
-        'password'    => 'password123',
-        'pdfUrl'      => asset('files/arabic-pro-course.pdf'),
-    ]);
-});
 
 require __DIR__ . '/auth.php';

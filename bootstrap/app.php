@@ -14,6 +14,10 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'student.auth' => \App\Http\Middleware\StudentAuth::class,
         ]);
+
+        $middleware->validateCsrfTokens(except: [
+            'paypal/webhook',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
